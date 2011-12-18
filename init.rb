@@ -1,2 +1,3 @@
 require 'redmine'
-require 'redmine_cas'
+require 'redmine_crowd'
+require 'crowd_client'

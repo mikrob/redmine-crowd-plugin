@@ -1,26 +1,38 @@
 
 <fieldset>
-  <legend>CAS Plugin settings</legend>
+  <legend>Crowd Plugin settings</legend>
   <p>
     <label>Enabled</label>
     <%= check_box_tag 'settings[enabled]', true, @settings[:enabled] %>
   </p>
   <p>
-    <label>CAS base url</label>
-    <%= text_field_tag 'settings[cas_base_url]', @settings[:cas_base_url] %>
+    <label>Crowd url</label>
+    <%= text_field_tag 'settings[crowd_base_url]', @settings[:crowd_base_url] %>
+  </p>
+  <p>
+    <label>Crowd application name</label>
+    <%= text_field_tag 'settings[crowd_appname]', @settings[:crowd_appname] %>
+  </p>
+  <p>
+    <label>Crowd application password</label>
+    <%= text_field_tag 'settings[crowd_apppassword]', @settings[:crowd_apppassword] %>
+  </p>
+  <p>
+    <label>Crowd cookie name</label>
+    <%= text_field_tag 'settings[crowd_cookiename]', @settings[:crowd_cookiename] %>
   </p>
   <p>
     <label>Keep native login link</label>
-    <%= check_box_tag 'settings[login_without_cas]', true, @settings[:login_without_cas] %>
+    <%= check_box_tag 'settings[login_without_crowd]', true, @settings[:login_without_crowd] %>
   </p>
   <p>
     <label>Auto create users</label>
     <%= check_box_tag 'settings[auto_create_users]', true, @settings[:auto_create_users] %><br />
-    <em>Create Redmine users on-the-fly for successfully authenticated CAS users if they don't exist in Redmine yet</em>
+    <em>Create Redmine users on-the-fly for successfully authenticated Crowd users if they don't exist in Redmine yet</em>
   </p>
   <p>
     <label>Update user attributes</label>
     <%= check_box_tag 'settings[auto_update_attributes_on_login]', true, @settings[:auto_update_attributes_on_login] %><br />
-    <em>On each login update Redmine user attributes from CAS extra user attributes</em>
+    <em>On each login update Redmine user attributes from Crowd extra user attributes</em>
   </p>
 </fieldset>
