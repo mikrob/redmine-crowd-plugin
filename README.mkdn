@@ -5,8 +5,8 @@ Install and configure plugin to delegate login/logout actions to your Crowd serv
 
 # Requirements
 
-    Tested with Redmine 1.3.0
-    The crowd gem : https://github.com/liff/crowd. For me, only the HEAD version work. I have installed crowd gem through bundler.
+- Tested with Redmine 1.3.0
+- The crowd gem : https://github.com/liff/crowd. For me, only the HEAD version work. I have installed crowd gem through bundler.
 
 # Installation & Configuration
 
