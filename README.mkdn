@@ -12,12 +12,14 @@ Install and configure plugin to delegate login/logout actions to your Crowd serv
 
 - install the plugin:
 
-    cd <redmine>/vendor/plugins
-    git clone git://github.com/bpaquet/redmine-crowd-plugin.git
+```
+cd <redmine>/vendor/plugins
+git clone git://github.com/bpaquet/redmine-crowd-plugin.git
+```
     
 - (re)start Redmine server
 - login as admin and go to `Administration -> Plugins -> Crowd Plugin -> Configure`
-- Tick `Enabled` and enter `Crowd server base URL`, 'Crowd App name`, `Crowd App password` (You have to create it in Crowd if needed)
+- Tick `Enabled` and enter `Crowd server base URL`, `Crowd App name`, `Crowd App password` (You have to create it in Crowd if needed)
 - Apply, logout
 - From now on all login requests will be delegated to Crowd server
 
