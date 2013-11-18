@@ -91,7 +91,7 @@ end
 # This way we're avoiding the problem where Rails reloads models but not plugins in development mode.
 if defined?(ActionController)
 
-  ActionController::Routing::RouteSet::Dispatcher.to_prepare do
+  Rails::Railtie::Configuration.to_prepare do
 
     # We're watching for setting updates for the plugin.
     # After each change we want to reconfigure Crowd client.
