@@ -24,7 +24,8 @@ Redmine::Plugin.register :redmine_crowd do
     :login_without_crowd             => false,
     :auto_create_users               => false,
     :auto_update_attributes_on_login => false
-  }, :partial => 'settings/settings'
+    :partial => 'settings/settings'
+  },
 
 end
 
