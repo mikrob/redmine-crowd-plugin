@@ -23,7 +23,7 @@ Redmine::Plugin.register :redmine_crowd do
     :crowd_cookiename                  => 'crowd.token_key',
     :login_without_crowd             => false,
     :auto_create_users               => false,
-    :auto_update_attributes_on_login => false
+    :auto_update_attributes_on_login => false,
     :partial => 'settings/settings'
   },
 
