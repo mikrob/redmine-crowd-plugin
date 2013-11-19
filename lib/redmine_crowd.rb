@@ -1,6 +1,6 @@
 Redmine::Plugin.register :redmine_crowd do
-  name        "Crowd Authentication"
-  author      'Bertrand Paquet'
+  name        "redmine_crowd"
+  author      'Bertrand Paquet, Mikael Robert'
   description "Crow single sign-on service authentication support. Inspired from redmine cas plugin."
   version     '0.0.3'
 
@@ -24,9 +24,9 @@ Redmine::Plugin.register :redmine_crowd do
     :login_without_crowd             => false,
     :auto_create_users               => false,
     :auto_update_attributes_on_login => false,
-    :partial => 'settings/settings'
+#    :partial => 'settings/settings'
   },
-
+  :partial => 'settings/settings'
 end
 
 # Utility class to simplify plugin usage
@@ -92,7 +92,7 @@ end
 # This way we're avoiding the problem where Rails reloads models but not plugins in development mode.
 if defined?(ActionController)
 
-  Rails::Railtie::Configuration.to_prepare do
+   Rails.configuration.to_prepare do
 
     # We're watching for setting updates for the plugin.
     # After each change we want to reconfigure Crowd client.
